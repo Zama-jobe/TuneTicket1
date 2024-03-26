@@ -2,26 +2,21 @@
 class FormValidator {
     // Constructor to initialize the form selector and set up event listener
     constructor(formSelector) {
-        // Find the form element using the provided selector
         this.form = document.querySelector(formSelector);
-        // Initialize the form validation
         this.initialize();
     }
 
     // Method to initialize form validation
     initialize() {
         // Add submit event listener to the form
-        this.form.addEventListener('submit', event => {
-            // Prevent the default form submission behavior
+        this.form.addEventListener('submit', event => { 
             event.preventDefault();
-            // Validate the form
             this.validateForm();
         });
     }
 
     // Method to validate form inputs
     validateForm() {
-        // Get form input elements
         const nameInput = document.getElementById('ticket-form-name');
         const emailInput = document.getElementById('ticket-form-email');
         const phoneInput = document.getElementById('ticket-form-phone');
